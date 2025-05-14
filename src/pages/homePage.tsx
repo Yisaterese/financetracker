@@ -66,7 +66,7 @@ export default function HomePage() {
                                         </Button>
                                     </Link>
                                     <Link to="/about">
-                                        <Button size="lg" variant="outline">
+                                        <Button size="lg" className="bg-white">
                                             Learn More
                                         </Button>
                                     </Link>
