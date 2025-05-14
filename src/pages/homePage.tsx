@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import {Link} from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import type {ButtonHTMLAttributes, ReactNode} from 'react';
 
@@ -7,7 +7,6 @@ const cn = (...inputs: string[]) => {
 };
 
 export default function HomePage() {
-    // Button component logic inline (fixed type)
     const Button = ({
                         children,
                         variant = 'default',
@@ -59,7 +58,7 @@ export default function HomePage() {
                                     </p>
                                 </div>
                                 <div className="flex flex-col gap-2 min-[400px]:flex-row">
-                                    <Link to="/dashboard">
+                                    <Link to="/pages/dashboard">
                                         <Button size="lg">
                                             Get Started
                                             <ArrowRight className="ml-2 h-4 w-4" />
