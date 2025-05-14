@@ -1,14 +1,13 @@
-// src/utils.ts
-// src/utils.ts
 import type {Transaction, Category} from './types';
 
 export const saveData = (key: string, data: Transaction[] | Category[]) => {
     localStorage.setItem(key, JSON.stringify(data));
 };
 
-export const loadData = (key: string): Transaction[] | Category[] => {
+// Constrain T to be an array type
+export const loadData = <T extends never[]>(key: string): T => {
     const data = localStorage.getItem(key);
-    return data ? JSON.parse(data) : [];
+    return data ? (JSON.parse(data) as T) : [] as unknown as T;
 };
 
 export const generateId = () => {
